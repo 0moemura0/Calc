@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/result"
+        style="@style/AppTheme.expression.result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/expression"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/expression"
+        style="@style/AppTheme.expression"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@id/key"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result" />
+
+    <LinearLayout
+        android:id="@+id/key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expression">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:columnCount="4">
+
+            <Button
+                android:id="@+id/pi"
+                style="@style/AppTheme.button"
+                android:text="pi" />
+
+            <Button
+                android:id="@+id/pow"
+                style="@style/AppTheme.button"
+                android:text="^" />
+
+            <Button
+                android:id="@+id/delall"
+                style="@style/AppTheme.button"
+                android:text="c" />
+
+            <Button
+                android:id="@+id/delsymb"
+                style="@style/AppTheme.button"
+                android:text="del" />
+
+            <Button
+                android:id="@+id/one"
+                style="@style/AppTheme.button"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/two"
+                style="@style/AppTheme.button"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/three"
+                style="@style/AppTheme.button"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/plus"
+                style="@style/AppTheme.button"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/four"
+                style="@style/AppTheme.button"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/five"
+                style="@style/AppTheme.button"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/six"
+                style="@style/AppTheme.button"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/minus"
+                style="@style/AppTheme.button"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/seven"
+                style="@style/AppTheme.button"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/eight"
+                style="@style/AppTheme.button"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/nine"
+                style="@style/AppTheme.button"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/multiply"
+                style="@style/AppTheme.button"
+                android:text="*" />
+
+            <Button
+                android:id="@+id/separator"
+                style="@style/AppTheme.button"
+                android:text="." />
+
+            <Button
+                android:id="@+id/zero"
+                style="@style/AppTheme.button"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/equal"
+                style="@style/AppTheme.button"
+                android:text="="
+                app:layout_columnSpan="1"
+                app:layout_gravity="fill" />
+
+            <Button
+                android:id="@+id/division"
+                style="@style/AppTheme.button"
+                android:text="/" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/keyboardsuper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:columnCount="4">
+
+            <Button
+                android:id="@+id/pisuper"
+                style="@style/AppTheme.button"
+                android:text="pi" />
+
+            <Button
+                android:id="@+id/e"
+                style="@style/AppTheme.button"
+                android:text="e" />
+
+            <Button
+                android:id="@+id/delallsuper"
+                style="@style/AppTheme.button"
+                android:text="c" />
+
+            <Button
+                android:id="@+id/delsymbsuper"
+                style="@style/AppTheme.button"
+                android:text="del" />
+
+            <Button
+                android:id="@+id/sin"
+                style="@style/AppTheme.button"
+                android:text="sin" />
+
+            <Button
+                android:id="@+id/cos"
+                style="@style/AppTheme.button"
+                android:text="cos" />
+
+            <Button
+                android:id="@+id/asin"
+                style="@style/AppTheme.button"
+                android:text="asin" />
+
+            <Button
+                android:id="@+id/acos"
+                style="@style/AppTheme.button"
+                android:text="acot" />
+
+            <Button
+                android:id="@+id/tg"
+                style="@style/AppTheme.button"
+                android:text="tg" />
+
+            <Button
+                android:id="@+id/ctg"
+                style="@style/AppTheme.button"
+                android:text="ctg" />
+
+            <Button
+                android:id="@+id/atg"
+                style="@style/AppTheme.button"
+                android:text="atg" />
+
+            <Button
+                android:id="@+id/actg"
+                style="@style/AppTheme.button"
+                android:text="actg" />
+
+
+            <Button
+                android:id="@+id/log"
+                style="@style/AppTheme.button"
+                android:text="log" />
+
+            <Button
+                android:id="@+id/ln"
+                style="@style/AppTheme.button"
+                android:text="ln" />
+
+            <Button
+                android:id="@+id/sqrt"
+                style="@style/AppTheme.button"
+                android:text="sqrt" />
+
+            <Button
+                android:id="@+id/factorial"
+                style="@style/AppTheme.button"
+                android:text="!" />
+
+
+            <Button
+                android:id="@+id/skobkochka1"
+                style="@style/AppTheme.button"
+                android:text="(" />
+
+            <Button
+                android:id="@+id/skobkochka2"
+                style="@style/AppTheme.button"
+                android:text=")" />
+
+            <Button
+                android:id="@+id/equalsuper"
+                style="@style/AppTheme.button"
+                android:text="="
+                app:layout_columnSpan="2"
+                app:layout_gravity="fill" />
+        </androidx.gridlayout.widget.GridLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
